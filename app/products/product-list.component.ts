@@ -20,9 +20,12 @@ export class ProductListComponent implements OnInit {
     set listFilter(value: string) {
         this._listFilter = value;
         this.filteredProducts = this.listFilter ? this.performFilter(this.listFilter) : this.products;
+        console.log(value);
     }
 
     filteredProducts: IProduct[];
+
+
     products: IProduct[] = [
         {
             "productId": 2,
